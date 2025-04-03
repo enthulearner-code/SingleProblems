@@ -6,7 +6,7 @@ public class MinimumRecolors {
     public int minimumRecolors(String blocks, int k) {
         int blockSize = blocks.length();
         int minimumSwaps = -1;
-        for(int i=0;i<blockSize-k;i++){
+        for(int i=0;i<=blockSize-k;i++){
             String blocksToCheck = blocks.substring(i,i+k);
             int whiteBlocksCount = checkForNumberOfWhites(blocksToCheck);
             if(minimumSwaps == -1 || minimumSwaps > whiteBlocksCount)
